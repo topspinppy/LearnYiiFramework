@@ -15,9 +15,15 @@
     echo CHtml::checkBox("book", false, array("value"=>"php"));
     echo CHtml::label("PHP",null);
 
-    echo CHtml::checkBox("book", false, array("value"=>"javascript"));
+    echo CHtml::checkBox("book", false, array("value"=>"javascript"))."<br/>";
     echo CHtml::label("JAVASCRIPT",null);
 
+    $data = array( 
+        "1001" => "Windows",
+        "1002" => "Ubuntu",
+        "1003" => "Linux Tle"
+    );
+    echo CHtml::checkBoxList("os",null,$data);
     echo CHtml::endForm();
 
 ?>
