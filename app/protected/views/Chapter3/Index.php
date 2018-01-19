@@ -24,6 +24,24 @@
         "1003" => "Linux Tle"
     );
     echo CHtml::checkBoxList("os",null,$data);
+
+    echo CHtml::radioButton("sex", false, array("value" => "f"));
+    echo "Female";
+
+    echo CHtml::radioButton("sex", false, array("value" => "m"));
+    echo "Male";
+
+    echo CHtml::fileField("myfile");
+    echo CHtml::hiddenField("myhidden" , 10);
+
+    $datas = array(
+        "1001" => "Java",
+        "1002" => "PHP",
+        "1003" => "Yii Framework"
+    );
+
+    echo CHtml::dropDownList("ddl",NULL,$datas);
+    echo CHtml::passwordField("mypassword");
     echo CHtml::endForm();
 
 ?>
