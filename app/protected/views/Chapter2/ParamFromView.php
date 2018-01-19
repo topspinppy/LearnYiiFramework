@@ -1,0 +1,1 @@
+<?php echo CHtml::link("ส่งค่า x", array("Chapter2/ParamFromView", "x"=>10)); ?>
