@@ -395,3 +395,17 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/topspinppy/app/index.php?r=Chapter5/CGridView
 ---
+2018/02/02 09:23:36 [error] [php] Cannot modify header information - headers already sent by (output started at C:\AppServ\www\topspinppy\app\protected\controllers\Chapter5Controller.php:18) (C:\AppServ\www\topspinppy\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\AppServ\www\topspinppy\app\protected\controllers\Chapter5Controller.php(19): Chapter5Controller->redirect()
+#1 C:\AppServ\www\topspinppy\framework\web\actions\CInlineAction.php(49): Chapter5Controller->actionForm()
+#2 C:\AppServ\www\topspinppy\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\AppServ\www\topspinppy\framework\web\CController.php(286): Chapter5Controller->runAction()
+#4 C:\AppServ\www\topspinppy\framework\web\CController.php(265): Chapter5Controller->runActionWithFilters()
+#5 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(282): Chapter5Controller->run()
+#6 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\AppServ\www\topspinppy\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\AppServ\www\topspinppy\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/topspinppy/app/index.php?r=chapter5/Form
+in C:\AppServ\www\topspinppy\app\protected\controllers\Chapter5Controller.php (19)
+in C:\AppServ\www\topspinppy\app\index.php (13)
