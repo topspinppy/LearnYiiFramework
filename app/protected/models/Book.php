@@ -15,6 +15,35 @@ class Book extends CActiveRecord {
             "price"=>"ราคา"
         );
     }
+    public function rules() {
+        return array(
+            array('name,price','required'),
+            array('price','numerical','integerOnly' => true),
+            array('name','length','max' => 255),
+            array('id,name,price','safe','on' => 'search')
+        );
+    }
+    public function search() {
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('id', $this->id);
+        $criteria->compare('name', $this->name, true);
+        $criteria->compare('price', $this->price);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+    public function getButtonEdit($data,$row) {
+        if($data->author_id == 1) 
+        {
+            $url = array("Chapter5/Form", "id"=>$data->id);
+            $link = CHtml::link("edit", $url);
+
+            return $link;
+        }
+        return null;
+    }
 }
 
 ?>
