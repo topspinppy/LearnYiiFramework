@@ -8,13 +8,6 @@ class Book extends CActiveRecord {
     {
         return "books";
     }
-    public function attributeLabels() {
-        return array(
-            "id"=>"รหัส",
-            "name"=>"ชื่อหนังสือ",
-            "price"=>"ราคา"
-        );
-    }
     public function rules() {
         return array(
             array('name,price','required'),
@@ -43,6 +36,21 @@ class Book extends CActiveRecord {
             return $link;
         }
         return null;
+    }
+    public function attributeLabels()
+    {
+        return array(
+            "id" => "รหัส",
+            "name" => "ชื่อหนังสือ",
+            "price" => "ราคา",
+            "book_type_id" => "ประเภทหนังสือ"
+        );
+    }
+    public function relations(){
+        return array
+        (
+            'book_types' => array(self::BELONGS_TO,"BookType","book_type_id")
+        );
     }
 }
 

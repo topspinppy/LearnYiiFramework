@@ -747,3 +747,79 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/topspinppy/app/index.php?r=Chapter7/ButtonAndGridView
 ---
+2018/02/23 09:05:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "CGridView".' in C:\AppServ\www\topspinppy\framework\web\CController.php:483
+Stack trace:
+#0 C:\AppServ\www\topspinppy\framework\web\CController.php(270): CController->missingAction('CGridView')
+#1 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(282): CController->run('CGridView')
+#2 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(141): CWebApplication->runController('chapter6/CGridV...')
+#3 C:\AppServ\www\topspinppy\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\AppServ\www\topspinppy\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/topspinppy/app/index.php?r=chapter6/CGridView
+---
+2018/02/23 09:05:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ButtonAndGridView".' in C:\AppServ\www\topspinppy\framework\web\CController.php:483
+Stack trace:
+#0 C:\AppServ\www\topspinppy\framework\web\CController.php(270): CController->missingAction('ButtonAndGridVi...')
+#1 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(282): CController->run('ButtonAndGridVi...')
+#2 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(141): CWebApplication->runController('Chapter7/Button...')
+#3 C:\AppServ\www\topspinppy\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\AppServ\www\topspinppy\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/topspinppy/app/index.php?r=Chapter7/ButtonAndGridView
+---
+2018/02/23 09:54:25 [error] [exception.CException] exception 'CException' with message 'Property "Book.Book_type_id" is not defined.' in C:\AppServ\www\topspinppy\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\AppServ\www\topspinppy\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Book_type_id')
+#1 C:\AppServ\www\topspinppy\framework\db\ar\CActiveFinder.php(656): CActiveRecord->__get('Book_type_id')
+#2 C:\AppServ\www\topspinppy\framework\db\ar\CActiveFinder.php(500): CJoinElement->applyLazyCondition(Object(CJoinQuery), Object(Book))
+#3 C:\AppServ\www\topspinppy\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Book))
+#4 C:\AppServ\www\topspinppy\framework\db\ar\CActiveRecord.php(281): CActiveFinder->lazyFind(Object(Book))
+#5 C:\AppServ\www\topspinppy\framework\db\ar\CActiveRecord.php(181): CActiveRecord->getRelated('book_types')
+#6 C:\AppServ\www\topspinppy\framework\web\helpers\CHtml.php(2135): CActiveRecord->__isset('book_types')
+#7 C:\AppServ\www\topspinppy\framework\zii\widgets\grid\CDataColumn.php(139): CHtml::value(Object(Book), 'book_types.book...')
+#8 C:\AppServ\www\topspinppy\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent(0, Object(Book))
+#9 C:\AppServ\www\topspinppy\framework\zii\widgets\grid\CGridView.php(616): CGridColumn->renderDataCell(0)
+#10 C:\AppServ\www\topspinppy\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow(0)
+#11 C:\AppServ\www\topspinppy\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#12 C:\AppServ\www\topspinppy\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#13 [internal function]: CBaseListView->renderSection(Array)
+#14 C:\AppServ\www\topspinppy\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#15 C:\AppServ\www\topspinppy\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#16 C:\AppServ\www\topspinppy\framework\web\CBaseController.php(173): CBaseListView->run()
+#17 C:\AppServ\www\topspinppy\app\protected\views\Chapter7\BelongsTo.php(10): CBaseController->widget('zii.widgets.gri...', Array)
+#18 C:\AppServ\www\topspinppy\framework\web\CBaseController.php(126): require('C:\AppServ\www\...')
+#19 C:\AppServ\www\topspinppy\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#20 C:\AppServ\www\topspinppy\framework\web\CController.php(869): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#21 C:\AppServ\www\topspinppy\framework\web\CController.php(782): CController->renderPartial('BelongsTo', Array, true)
+#22 C:\AppServ\www\topspinppy\app\protected\controllers\Chapter7Controller.php(38): CController->render('BelongsTo', Array)
+#23 C:\AppServ\www\topspinppy\framework\web\actions\CInlineAction.php(49): Chapter7Controller->actionBelongsTo()
+#24 C:\AppServ\www\topspinppy\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 C:\AppServ\www\topspinppy\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#26 C:\AppServ\www\topspinppy\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(282): CController->run('BelongsTo')
+#28 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(141): CWebApplication->runController('Chapter7/Belong...')
+#29 C:\AppServ\www\topspinppy\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\AppServ\www\topspinppy\app\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/topspinppy/app/index.php?r=Chapter7/BelongsTo
+---
+2018/02/23 10:06:34 [error] [exception.CException] exception 'CException' with message 'Property "BookType.books" is not defined.' in C:\AppServ\www\topspinppy\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\AppServ\www\topspinppy\framework\db\ar\CActiveRecord.php(145): CComponent->__get('books')
+#1 C:\AppServ\www\topspinppy\app\protected\views\Chapter7\HasMany.php(7): CActiveRecord->__get('books')
+#2 C:\AppServ\www\topspinppy\framework\web\CBaseController.php(126): require('C:\AppServ\www\...')
+#3 C:\AppServ\www\topspinppy\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#4 C:\AppServ\www\topspinppy\framework\web\CController.php(869): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#5 C:\AppServ\www\topspinppy\framework\web\CController.php(782): CController->renderPartial('HasMany', Array, true)
+#6 C:\AppServ\www\topspinppy\app\protected\controllers\Chapter7Controller.php(46): CController->render('HasMany', Array)
+#7 C:\AppServ\www\topspinppy\framework\web\actions\CInlineAction.php(49): Chapter7Controller->actionHasMany()
+#8 C:\AppServ\www\topspinppy\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\AppServ\www\topspinppy\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\AppServ\www\topspinppy\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(282): CController->run('HasMany')
+#12 C:\AppServ\www\topspinppy\framework\web\CWebApplication.php(141): CWebApplication->runController('Chapter7/HasMan...')
+#13 C:\AppServ\www\topspinppy\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\AppServ\www\topspinppy\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/topspinppy/app/index.php?r=Chapter7/HasMany
+---

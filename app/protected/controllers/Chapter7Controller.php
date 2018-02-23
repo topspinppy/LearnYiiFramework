@@ -30,5 +30,20 @@ class Chapter7Controller extends Controller
             "model" => $model
         ));
     }
+    function actionBelongsTo()
+    {
+        $model = new Book();
+        $this->render("BelongsTo", array(
+            "model" => $model
+        ));
+    }
+    function actionHasMany()
+    {
+        $book_types = BookType::model()->findAll();
+
+        $this->render("HasMany", array(
+            "book_types" => $book_types
+        ));
+    }
 }
 ?>
